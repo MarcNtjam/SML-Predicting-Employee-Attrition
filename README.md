@@ -106,44 +106,9 @@ Model quality was further confirmed with a **confusion matrix** and a **ROC curv
 └── README.md
 ```
 
-## 🚀 Getting Started
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/SML-Predicting-Employee-Attrition.git
-cd SML-Predicting-Employee-Attrition
-
-# 2. Install core dependencies
-pip install pandas numpy matplotlib seaborn missingno scikit-learn imbalanced-learn xgboost jupyter
-
-# 3. Launch the notebook
-jupyter notebook Project-SML2-Classification.ipynb
-```
-
-> **⚠️ PyCaret note:** the AutoML section needs PyCaret, which pins older versions of NumPy / scikit-learn and can clash with a modern Anaconda base environment. Install it in an **isolated environment** so it doesn't break your other projects:
-> ```bash
-> conda create -n pycaret-env python=3.11 -y
-> conda activate pycaret-env
-> pip install pycaret
-> python -m ipykernel install --user --name pycaret-env --display-name "Python (pycaret)"
-> ```
-> Then switch the notebook kernel to **Python (pycaret)** before running the AutoML cells.
-
-> **Path note:** update the dataset path in the notebook to your local copy of `employee_attrition.csv` (e.g. place it in a `data/` folder and load with a relative path).
-
-## 🔮 Future Improvements
-
-- **Add a feature-importance analysis** (Random Forest importances or SHAP values) to explicitly rank the drivers of attrition — likely candidates include `OverTime`, `JobSatisfaction`, `MonthlyIncome`, `YearsAtCompany`, and `WorkLifeBalance`.
-- **Run and report the PyCaret AutoML comparison** to benchmark the manual Random Forest against a wider model set.
-- **Tune the decision threshold** to prioritise recall on the "Leave" class if the business cost of missing a leaver outweighs a false alarm.
-- **Consider SMOTE inside a cross-validation pipeline** (rather than before the split) to give a fully leakage-free performance estimate.
-- **Deploy** the finalised model as a simple scoring tool or API so HR can flag at-risk employees on demand.
 
 ## 👤 Author
 
-**Marc Aurel Ntjam Minkeng** — *Data Science*
-> Update with your GitHub profile and contact links.
+**Marc Ntjam** 
 
----
-
-*Supervised Learning · Classification · HR Analytics — a 10Alytics case study.*
